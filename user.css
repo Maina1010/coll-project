@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+}
+
+/* ===== SIDEBAR ===== */
+.menu {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0d2b66;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    border-left: 4px solid transparent;
+}
+
+.menu a.active {
+    background-color: #e53935;
+    border-left: 4px solid #fff;
+}
+
+.menu a:hover {
+    background-color: #1e3a8a;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+/* ===== NAVBAR ===== */
+.top-navbar {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 40px;
+}
+
+/* PROFILE */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.user-img {
+    width: 40px;
+    height: 40px;
+    background: #1e293b;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* PROFILE DROPDOWN */
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 220px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+.profile-dropdown.show {
+    display: block;
+}
+
+.profile-dropdown button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    background: #e53935;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ===== DASHBOARD HEADER ===== */
+.dashboard-header {
+    background: #0d2b66;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* ===== RUNNING TEXT ===== */
+.running-text {
+    width: 100%;
+    background: #e53935;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 6px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.running-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 15s linear infinite;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* ===== BUTTON SECTION ===== */
+.button-section {
+    text-align: center;
+    margin: 120px;
+}
+
+.red-btn {
+    background: #e53935;
+    color: white;
+    padding: 18px 60px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.voting-form {
+    margin-top: 30px;
+    background: white;
+    padding: 25px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.voting-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.voting-form button {
+    width: 100%;
+    padding: 10px;
+    background: #0d2b66;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* ===== UNIQUE VOTE CARD ===== */
+.my-vote-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.vote-card {
+    background: rgb(246, 249, 250);
+    padding: 25px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-left: 5px solid #0c47bd;
+    text-align: center;
+}
+
+.vote-card h2 {
+    margin-bottom: 10px;
+    color: #216cce;
+}
+#myVoteBtn{
+      text-decoration: none;
+    color:inherit;
+}
+.menu-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.menu-list{
+    list-style:none;
+    padding:0;
+}
+
+.menu-list li{
+    padding:12px 10px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.menu-list li:hover{
+    background:rgba(255,255,255,0.2);
+}
+
+/* Chat badge */
+.chat-badge{
+    margin-left:auto;
+    background:red;
+    padding:2px 6px;
+    border-radius:50%;
+    font-size:12px;
+}
+
+/* Chat Panel (opens beside menu) */
+.chat-container{
+    position:fixed;
+    left:260px;
+    bottom:20px;
+    width:350px;
+    height:450px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+/* Header */
+.chat-header{
+    background:#1e3c72;
+    color:white;
+    padding:12px;
+    display:flex;
+    justify-content:space-between;
+}
+
+/* Messages */
+.chat-box{
+    flex:1;
+    padding:10px;
+    overflow-y:auto;
+    background:#f4f6f9;
+}
+
+.message{
+    max-width:75%;
+    padding:8px 12px;
+    border-radius:15px;
+    margin:6px 0;
+    font-size:14px;
+    position:relative;
+}
+
+.user-message{
+    background:#1e3c72;
+    color:white;
+    margin-left:auto;
+}
+
+.admin-message{
+    background:#e4e6eb;
+    margin-right:auto;
+}
+
+/* Input */
+.chat-input{
+    display:flex;
+    gap:5px;
+    padding:10px;
+    border-top:1px solid #ddd;
+}
+
+.chat-input input{
+    flex:1;
+    padding:8px;
+}
+
+.chat-input button{
+    background:#1e3c72;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
+}
+.chatyo{
+    color:white;
+    margin-left:auto;
+}

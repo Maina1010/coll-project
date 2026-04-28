@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+
+<!-- menu -->
+<div class="menu">
+<h2 class="menu-title">Menu</h2>
+
+    <ul class="menu-list">
+        <!-- Chat Menu Item -->
+        <li id="chatMenu" class="chat-menu">
+            <i class="fa-solid fa-comments"></i>
+            <B class="chatyo">Chat</B> 💬
+            <span id="chatBadge" class="chat-badge">0</span>
+        </li>
+    </ul>
+
+</div>
+
+<!-- CHAT PANEL -->
+<div id="chatContainer" class="chat-container">
+
+    <div class="chat-header">
+        <span>Live Support</span>
+        <span id="closeChat">✖</span>
+    </div>
+
+    <div id="chatBox" class="chat-box"></div>
+
+    <div class="chat-input">
+        <select id="roleSelect">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <input type="text" id="messageInput" placeholder="Type message...">
+        <button id="sendBtn">Send</button>
+    </div>
+
+</div>   
+
+<!-- MAIN -->
+<div class="main">
+
+    <!-- NAVBAR -->
+    <div class="top-navbar">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Logo">
+        </div>
+<p>Home</p>
+<p>Vote</p>
+<p>Results</p>
+<p>News</p>
+        <div class="profile-section">
+            <span id="username">User</span>
+            <div class="user-img" id="userIcon">U</div>
+
+            <div class="profile-dropdown" id="profileDropdown">
+                <p><strong>Name:</strong> <span id="pName"></span></p>
+                <p><strong>Phone:</strong> <span id="pPhone"></span></p>
+                <p><strong>Aadhaar:</strong> <span id="pAadhaar"></span></p>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="dashboard-header">
+        <h1>Dashboard</h1>
+        <p>Welcome to Online Voting System</p>
+    </div>
+
+    <!-- RUNNING TEXT -->
+    <div class="running-text">
+        <div class="running-content">
+            🗳️ Voting is now open! Please verify your details and cast your vote carefully. Your vote matters!
+        </div>
+    </div>
+
+    <!-- START VOTING -->
+    <div class="button-section">
+        <button id="startVoting" class="red-btn">
+            Start Voting
+        </button>
+
+        <div class="voting-form" id="votingForm">
+            <h3>Voter Verification</h3>
+            <input type="text" id="voterId" placeholder="Enter Voter ID (10 Characters)">
+            <input type="date" id="dob">
+            <button type="button" id="submitVote">Submit</button>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <!-- UNIQUE MY VOTE SECTION -->
+    <div class="my-vote-section">
+        <div class="vote-card">
+             <a href="#" id="myVoteBtn">🗳️ My Vote</a>
+            <div class="vote-info">
+                <h2>Your Vote Details</h2>
+                <p id="myVoteResult">You have not voted yet.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="user.js"></script>
+</body>
+</html>
